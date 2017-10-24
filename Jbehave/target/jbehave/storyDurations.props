@@ -1,6 +1,0 @@
-#org.jbehave.core.embedder.StoryManager
-#Mon Oct 23 00:40:36 AMT 2017
-threads=1
-total=36000
-threadAverage=36000
-com/insite/jbehave/stories/Login.story=36000

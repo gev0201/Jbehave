@@ -14,7 +14,7 @@ public class InsiteJbehaveAuthValidator extends InsiteJbehaveBaseValidator {
 	}
 
 	public void buttonPressLogin() throws Exception {
-		driver.findElement(By.cssSelector("button[class^=bt]")).click();
+		driver.findElement(By.className("login-button")).click();
 
 	}
 

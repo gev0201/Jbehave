@@ -20,11 +20,11 @@ public class LoginSteps extends InsiteJbehaveAuthValidator {
 
 	@When("I hit the login button")
 	public void pressLoginbutton() throws Exception {
-	clickOnItemByClass("login-button");
+		buttonPressLogin();
 	}
 
 	@Then("I should login to insite home page")
 	public void checkInsiteHomePage() throws Exception {
-		webDreiwerQuit();
+		
 	}
 }
