@@ -15,12 +15,12 @@ import org.jbehave.core.reporters.StoryReporterBuilder;
 import org.jbehave.core.steps.InjectableStepsFactory;
 import org.jbehave.core.steps.InstanceStepsFactory;
 
-import com.insite.jbehave.steps.LoginSteps;
+import com.insite.jbehave.steps.CheckQIsExistSteps;
 
-public class LoginStories extends JUnitStories {
+public class CheckQIsExistStories extends JUnitStories {
 
 	@SuppressWarnings("deprecation")
-	public LoginStories() {
+	public CheckQIsExistStories() {
 		configuredEmbedder().useMetaFilters(Arrays.asList("-skip"));
 		configuredEmbedder().embedderControls().doGenerateViewAfterStories(true).doIgnoreFailureInStories(false)
 				.doIgnoreFailureInView(false).useStoryTimeoutInSecs(600);
@@ -38,12 +38,12 @@ public class LoginStories extends JUnitStories {
 
 	@Override
 	protected List<String> storyPaths() {
-		return new StoryFinder().findPaths(codeLocationFromClass(this.getClass()), "**/Login.story",
+		return new StoryFinder().findPaths(codeLocationFromClass(this.getClass()), "**/CheckQIsExist.story",
 				"**/excluded*.story");
 	}
 
 	@Override
 	public InjectableStepsFactory stepsFactory() {
-		return new InstanceStepsFactory(configuration(), new LoginSteps());
+		return new InstanceStepsFactory(configuration(), new CheckQIsExistSteps());
 	}
 }

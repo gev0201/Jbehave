@@ -8,23 +8,23 @@ import com.insite.jbehave.validators.InsiteJbehaveAuthValidator;
 
 public class LoginSteps extends InsiteJbehaveAuthValidator {
 
-	@Given("I am on insite index page")
-	public void openInsite() throws Exception {
-		openInsiteWebPage();
+	@Given("I am on insite login page")
+	public void IAmOnInsiteLoginPage() throws Exception {
+		checkInsiteMainPage();
 	}
 
-	@When("I input the username $username and password $password")
-	public void inputLoginCredential(String username, String password) throws Exception {
-		loginCredentials(username, password);
+	@When("I input the insite username $username and password $password")
+	public void inputInsiteLoginCredential(String username, String password) throws Exception {
+		loginInsite(username, password);
 	}
 
 	@When("I hit the login button")
 	public void pressLoginbutton() throws Exception {
-		buttonPressLogin();
+		buttonPressLoginInsite();
 	}
 
 	@Then("I should login to insite home page")
 	public void checkInsiteHomePage() throws Exception {
-		
+		checkInsiteQueriPage();
 	}
 }
